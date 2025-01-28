@@ -7,9 +7,9 @@ export default function Input({ textarea, label, ...props }) {
         {label}
       </label>
       {textarea ? (
-        <textarea {...props} className={classes} />
+        <textarea {...props} className={classes} ref={ref} />
       ) : (
-        <input className={classes} {...props} />
+        <input className={classes} {...props} ref={ref} />
       )}
     </p>
   );
