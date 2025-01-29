@@ -1,9 +1,9 @@
-import { useRef } from "react";
+import { useRef, forwardRef } from "react";
 import { useImperativeHandle } from "react";
 import { createPortal } from "react-dom";
 import Button from "./Button";
 
-export default function Modal({ children, Close }, ref) {
+export default function Modal({ children, Close, ref }) {
   const dialog = useRef();
 
   useImperativeHandle(ref, () => {
